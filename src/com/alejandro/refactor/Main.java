@@ -4,63 +4,63 @@ public class Main {
     /**
      * metodo para devolver la puntuacion de tenis
      */
-    public static String getScore(int m_score1, int m_score2) {
-        String score = "";
-        int tempScore=0;
+    public static String getScore(int puntuacioJugador1, int puntuacionJugador2) {
+        String puntuacion = "";
+        int puntuacionActual=0;
 
-        if (m_score1 == m_score2) {
-            switch (m_score1)
+        if (puntuacioJugador1 == puntuacionJugador2) {
+            switch (puntuacioJugador1)
             {
                 case 0:
-                    score = "Love-All";
+                    puntuacion = "Love-All";
                     break;
                 case 1:
-                    score = "Fifteen-All";
+                    puntuacion = "Fifteen-All";
                     break;
                 case 2:
-                    score = "Thirty-All";
+                    puntuacion = "Thirty-All";
                     break;
                 case 3:
-                    score = "Forty-All";
+                    puntuacion = "Forty-All";
                     break;
                 default:
-                    score = "Deuce";
+                    puntuacion = "Deuce";
                     break;
 
             }
         }
-        else if (m_score1 >=4 || m_score2 >=4)
+        else if (puntuacioJugador1 >=4 || puntuacionJugador2 >=4)
         {
-            int minusResult = m_score1-m_score2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
+            int ventajaPuntuacion = puntuacioJugador1-puntuacionJugador2;
+            if (ventajaPuntuacion==1) puntuacion ="Advantage player1";
+            else if (ventajaPuntuacion ==-1) puntuacion ="Advantage player2";
+            else if (ventajaPuntuacion>=2) puntuacion = "Win for player1";
+            else puntuacion ="Win for player2";
         }
         else
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
+                if (i==1) puntuacionActual = puntuacioJugador1;
+                else { puntuacion+="-"; puntuacionActual = puntuacionJugador2;}
+                switch(puntuacionActual)
                 {
                     case 0:
-                        score+="Love";
+                        puntuacion+="Love";
                         break;
                     case 1:
-                        score+="Fifteen";
+                        puntuacion+="Fifteen";
                         break;
                     case 2:
-                        score+="Thirty";
+                        puntuacion+="Thirty";
                         break;
                     case 3:
-                        score+="Forty";
+                        puntuacion+="Forty";
                         break;
                 }
             }
 
         }
-    return score;
+    return puntuacion;
     }
 }
