@@ -8,6 +8,7 @@ public class Main {
      */
     public static String getScore(int puntuacioJugador1, int puntuacionJugador2) {
         String puntuacion = "";
+        final int DIFERENCIA_MAXIMA=4;
 
         if (puntuacioJugador1 == puntuacionJugador2) {
             switch (puntuacioJugador1)
@@ -30,7 +31,7 @@ public class Main {
 
             }
         }
-        else if (puntuacioJugador1 >=4 || puntuacionJugador2 >=4)
+        else if (puntuacioJugador1 >=DIFERENCIA_MAXIMA || puntuacionJugador2 >=DIFERENCIA_MAXIMA)
         {
             int ventajaPuntuacion = puntuacioJugador1-puntuacionJugador2;
             if (ventajaPuntuacion==1) puntuacion ="Advantage player1";
@@ -40,12 +41,12 @@ public class Main {
         }
         else
         {
-            int puntuacionActual=0;
+            int auxPuntuacionActual=0;
             for (int i=1; i<3; i++)
             {
-                if (i==1) puntuacionActual = puntuacioJugador1;
-                else { puntuacion+="-"; puntuacionActual = puntuacionJugador2;}
-                switch(puntuacionActual)
+                if (i==1) auxPuntuacionActual = puntuacioJugador1;
+                else { puntuacion+="-"; auxPuntuacionActual = puntuacionJugador2;}
+                switch(auxPuntuacionActual)
                 {
                     case 0:
                         puntuacion+="Love";
