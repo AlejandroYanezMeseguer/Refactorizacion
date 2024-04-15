@@ -2,7 +2,9 @@ package com.alejandro.refactor;
 
 public class Main {
     /**
-     * metodo para devolver la puntuacion de tenis
+     * @param puntuacioJugador1
+     * @param puntuacionJugador2
+     * @return retorna la variable puntuacion que recoje el jugador ganador
      */
     public static String getScore(int puntuacioJugador1, int puntuacionJugador2) {
         String puntuacion = "";
