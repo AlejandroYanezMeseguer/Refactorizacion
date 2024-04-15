@@ -6,7 +6,6 @@ public class Main {
      */
     public static String getScore(int puntuacioJugador1, int puntuacionJugador2) {
         String puntuacion = "";
-        int puntuacionActual=0;
 
         if (puntuacioJugador1 == puntuacionJugador2) {
             switch (puntuacioJugador1)
@@ -39,6 +38,7 @@ public class Main {
         }
         else
         {
+            int puntuacionActual=0;
             for (int i=1; i<3; i++)
             {
                 if (i==1) puntuacionActual = puntuacioJugador1;
