@@ -1,3 +1,5 @@
+package com.alejandro.refactor;
+
 /**
  * Clase que contiene métodos matemáticos
  */
